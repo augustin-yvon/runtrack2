@@ -10,10 +10,12 @@
     <?php 
     $str = "Dans l'espace, personne ne vous entend crier.";
     $count = 0;
-    for ($i = 0; $i < strlen($str); $i++) {
+    
+    while (isset($str[$count])) {
         $count++;
     }
-    print("Cette chaîne à " . $count . " caratères.");
+
+    print("Cette chaîne a " . $count . " caractères.");    
     ?>
 </body>
 </html>
