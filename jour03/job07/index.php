@@ -11,7 +11,12 @@
     $str = "Certaines choses changent, et d'autres ne changeront jamais.";
     $premierCaractere = $str[0];
     
-    for ($i = 0; $i < strlen($str) - 1; $i++) {
+    $len = 0;
+    while (isset($str[$len])) {
+        $len++;
+    }
+
+    for ($i = 0; $i < $len - 1; $i++) {
         $str[$i] = $str[$i + 1];
     }
     
