@@ -11,7 +11,12 @@
     $str = "Les choses que l'on possede finissent par nous posseder.";
     $str_reverse = "";
 
-    for ($i = strlen($str) - 1; $i >= 0; $i--) {
+    $len = 0;
+    while (isset($str[$len])) {
+        $len++;
+    }
+
+    for ($i = $len - 1; $i >= 0; $i--) {
         $str_reverse .= $str[$i];
     }
 
