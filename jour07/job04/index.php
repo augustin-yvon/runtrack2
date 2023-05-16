@@ -1,8 +1,26 @@
 <?php
 function calcul($nbr, $op, $nbr2) {
-    $calc = $nbr . $op . $nbr2;
-    eval("\$result = $calc;");
-    return $result;
+    switch ($op) {
+        case '+':
+            $resultat = $nbr + $nbr2;
+            break;
+        case '-':
+            $resultat = $nbr - $nbr2;
+            break;
+        case '*':
+            $resultat = $nbr * $nbr2;
+            break;
+        case '/':
+            $resultat = $nbr / $nbr2;
+            break;
+        case '%':
+            $resultat = $nbr % $nbr2;
+            break;
+        default:
+            $resultat = "Opérateur invalide";
+    }
+    
+    return $resultat;
 }
 
 $nbr = 10;
